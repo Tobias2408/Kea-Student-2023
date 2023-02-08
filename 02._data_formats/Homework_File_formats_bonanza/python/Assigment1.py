@@ -3,12 +3,19 @@ import json
 from bs4 import BeautifulSoup
 import yaml
 from yaml.loader  import SafeLoader
+import csv 
 
 path = "../../me"
 #Read CSV 
 data = pd.read_csv(path + ".csv")
 print("\nCSV")
 print(data)
+#Parse CSV
+with open(path + ".csv", 'r') as csv_file:
+    reader = csv.reader(csv_file)
+    print("Rows")
+    for row in reader:
+        print(row)
 
 # Read Json 
 with open(path + ".json") as f:
@@ -16,6 +23,17 @@ with open(path + ".json") as f:
 
 print("\nJson")
 print(data)
+
+#Parse Json
+
+x = {
+  "name": "John",
+  "age": 30,
+}
+
+y = json.dumps(x)
+print("\nJson Parse")
+print(y)
 
 # Normal Text 
 
