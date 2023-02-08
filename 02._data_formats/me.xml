@@ -1,0 +1,7 @@
+// write xml versin
+<me>
+    <name>Tobias</name>
+    <hobbies>
+        <hobby>Programming </hobby>
+    </hobbies>
+</me>
