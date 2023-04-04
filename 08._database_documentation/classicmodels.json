@@ -1,0 +1,280 @@
+{
+    "schema": [
+        {
+            "table": "customers",
+            "columns": [
+                {
+                    "field": "customerNumber",
+                    "type": "int"
+                },
+                {
+                    "field": "customerName",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "contactLastName",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "contactFirstName",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "phone",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "addressLine1",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "addressLine2",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "city",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "state",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "postalCode",
+                    "type": "varchar(15)"
+                },
+                {
+                    "field": "country",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "salesRepEmployeeNumber",
+                    "type": "int"
+                },
+                {
+                    "field": "creditLimit",
+                    "type": "decimal(10,2)"
+                }
+            ]
+        },
+        {
+            "table": "employees",
+            "columns": [
+                {
+                    "field": "employeeNumber",
+                    "type": "int"
+                },
+                {
+                    "field": "lastName",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "firstName",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "extension",
+                    "type": "varchar(10)"
+                },
+                {
+                    "field": "email",
+                    "type": "varchar(100)"
+                },
+                {
+                    "field": "officeCode",
+                    "type": "varchar(10)"
+                },
+                {
+                    "field": "reportsTo",
+                    "type": "int"
+                },
+                {
+                    "field": "jobTitle",
+                    "type": "varchar(50)"
+                }
+            ]
+        },
+        {
+            "table": "offices",
+            "columns": [
+                {
+                    "field": "officeCode",
+                    "type": "varchar(10)"
+                },
+                {
+                    "field": "city",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "phone",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "addressLine1",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "addressLine2",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "state",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "country",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "postalCode",
+                    "type": "varchar(15)"
+                },
+                {
+                    "field": "territory",
+                    "type": "varchar(10)"
+                }
+            ]
+        },
+        {
+            "table": "orderdetails",
+            "columns": [
+                {
+                    "field": "orderNumber",
+                    "type": "int"
+                },
+                {
+                    "field": "productCode",
+                    "type": "varchar(15)"
+                },
+                {
+                    "field": "quantityOrdered",
+                    "type": "int"
+                },
+                {
+                    "field": "priceEach",
+                    "type": "decimal(10,2)"
+                },
+                {
+                    "field": "orderLineNumber",
+                    "type": "smallint"
+                }
+            ]
+        },
+        {
+            "table": "orders",
+            "columns": [
+                {
+                    "field": "orderNumber",
+                    "type": "int"
+                },
+                {
+                    "field": "orderDate",
+                    "type": "date"
+                },
+                {
+                    "field": "requiredDate",
+                    "type": "date"
+                },
+                {
+                    "field": "shippedDate",
+                    "type": "date"
+                },
+                {
+                    "field": "status",
+                    "type": "varchar(15)"
+                },
+                {
+                    "field": "comments",
+                    "type": "text"
+                },
+                {
+                    "field": "customerNumber",
+                    "type": "int"
+                }
+            ]
+        },
+        {
+            "table": "payments",
+            "columns": [
+                {
+                    "field": "customerNumber",
+                    "type": "int"
+                },
+                {
+                    "field": "checkNumber",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "paymentDate",
+                    "type": "date"
+                },
+                {
+                    "field": "amount",
+                    "type": "decimal(10,2)"
+                }
+            ]
+        },
+        {
+            "table": "productlines",
+            "columns": [
+                {
+                    "field": "productLine",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "textDescription",
+                    "type": "varchar(4000)"
+                },
+                {
+                    "field": "htmlDescription",
+                    "type": "mediumtext"
+                },
+                {
+                    "field": "image",
+                    "type": "mediumblob"
+                }
+            ]
+        },
+        {
+            "table": "products",
+            "columns": [
+                {
+                    "field": "productCode",
+                    "type": "varchar(15)"
+                },
+                {
+                    "field": "productName",
+                    "type": "varchar(70)"
+                },
+                {
+                    "field": "productLine",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "productScale",
+                    "type": "varchar(10)"
+                },
+                {
+                    "field": "productVendor",
+                    "type": "varchar(50)"
+                },
+                {
+                    "field": "productDescription",
+                    "type": "text"
+                },
+                {
+                    "field": "quantityInStock",
+                    "type": "smallint"
+                },
+                {
+                    "field": "buyPrice",
+                    "type": "decimal(10,2)"
+                },
+                {
+                    "field": "MSRP",
+                    "type": "decimal(10,2)"
+                }
+            ]
+        }
+    ]
+}
